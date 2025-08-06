@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Palette, Coffee, Zap, Star, Heart } from 'lucide-react';
+import { Code, Palette, Coffee, Zap, Star, Heart,Shell } from 'lucide-react';
 
 const FloatingElements: React.FC = () => {
   const elements = [
@@ -9,6 +9,10 @@ const FloatingElements: React.FC = () => {
     { icon: Zap, color: 'text-purple-500', size: 'w-7 h-7', delay: '3s', top: '70%', left: '85%' },
     { icon: Star, color: 'text-pink-500', size: 'w-4 h-4', delay: '4s', top: '30%', left: '90%' },
     { icon: Heart, color: 'text-blue-500', size: 'w-6 h-6', delay: '5s', top: '80%', left: '5%' },
+    { icon: Shell, color: 'text-blue-500', size: 'w-6 h-6', delay: '7s', top: '90%', left: '28%' },
+    { icon: Heart, color: 'text-blue-500', size: 'w-6 h-6', delay: '5s', top: '80%', left: '5%' },
+    { icon: Heart, color: 'text-blue-500', size: 'w-6 h-6', delay: '5s', top: '80%', left: '5%' },
+    
   ];
 
   return (

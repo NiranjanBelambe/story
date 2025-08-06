@@ -136,7 +136,7 @@ const AboutSection: React.FC = () => {
         </svg>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes skillBar {
           from { width: 0%; }
           to { width: var(--skill-width); }
