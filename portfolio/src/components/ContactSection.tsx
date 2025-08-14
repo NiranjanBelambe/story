@@ -34,21 +34,21 @@ const ContactSection: React.FC = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@yourname.com',
-      href: 'mailto:hello@yourname.com',
+      value: 'niranjanbelambe28@gmail.com',
+      href: 'mailto:niranjanbelambe28@gmail.com',
       color: 'purple'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '+91 9665408390',
+      href: 'tel:+919665408390',
       color: 'blue'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Bengaluru, Karnataka',
       href: '#',
       color: 'pink'
     }
@@ -58,19 +58,19 @@ const ContactSection: React.FC = () => {
     {
       icon: Github,
       name: 'GitHub',
-      href: 'https://github.com/yourusername',
+      href: 'https://github.com/NiranjanBelambe',
       color: 'text-dark-300 hover:text-purple-400'
     },
     {
       icon: Linkedin,
       name: 'LinkedIn',
-      href: 'https://linkedin.com/in/yourusername',
+      href: 'https://www.linkedin.com/in/niranjan-belambe-71329018b/',
       color: 'text-dark-300 hover:text-blue-400'
     },
     {
       icon: Twitter,
       name: 'Twitter',
-      href: 'https://twitter.com/yourusername',
+      href: 'https://twitter.com/BelambeNiranjan',
       color: 'text-dark-300 hover:text-pink-400'
     },
     {
@@ -278,10 +278,10 @@ const ContactSection: React.FC = () => {
         {/* Footer */}
         <div className="mt-20 pt-8 border-t border-dark-700 text-center">
           <p className="text-dark-400 mb-4">
-            © 2024 Your Name. Built with React, TypeScript, and lots of ☕
+            © 2025 Niranjan Belambe. Built with React, TypeScript, and lots of ☕
           </p>
           <p className="text-sm text-dark-500">
-            Designed and developed with passion in San Francisco
+            Designed and developed with passion in Bengaluru
           </p>
         </div>
 

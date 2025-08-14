@@ -1,69 +1,57 @@
 import React from 'react';
-import { Calendar, MapPin, ExternalLink, Briefcase } from 'lucide-react';
-
+import { useState } from "react";
+import { Calendar, MapPin, ExternalLink, Briefcase, Instagram, Twitter, Mail, Linkedin } from 'lucide-react';
 const ExperienceSection: React.FC = () => {
+  const [open, setOpen] = useState(false);
+
   const experiences = [
-    {
-      title: 'Senior Full Stack Developer',
-      company: 'Tech Innovation Corp',
-      location: 'San Francisco, CA',
-      period: '2022 - Present',
-      type: 'Full-time',
-      description: 'Leading development of scalable web applications using React, Node.js, and AWS. Mentoring junior developers and architecting microservices solutions.',
-      achievements: [
-        'Increased application performance by 40% through optimization',
-        'Led a team of 5 developers on major product launches',
-        'Implemented CI/CD pipelines reducing deployment time by 60%'
-      ],
-      technologies: ['React', 'Node.js', 'TypeScript', 'AWS', 'Docker', 'PostgreSQL'],
-      color: 'purple'
-    },
-    {
-      title: 'Full Stack Developer',
-      company: 'Digital Solutions Ltd',
-      location: 'New York, NY',
-      period: '2021 - 2022',
-      type: 'Full-time',
-      description: 'Developed and maintained multiple client projects using modern web technologies. Collaborated with design teams to implement pixel-perfect UIs.',
-      achievements: [
-        'Successfully delivered 15+ client projects on time',
-        'Reduced bug reports by 35% through comprehensive testing',
-        'Introduced automated testing practices to the team'
-      ],
-      technologies: ['Vue.js', 'Python', 'Django', 'MySQL', 'Redis', 'Nginx'],
-      color: 'blue'
-    },
-    {
-      title: 'Frontend Developer',
-      company: 'Creative Agency Pro',
-      location: 'Los Angeles, CA',
-      period: '2020 - 2021',
-      type: 'Full-time',
-      description: 'Specialized in creating responsive, interactive websites and web applications. Worked closely with designers to bring creative visions to life.',
-      achievements: [
-        'Built 20+ responsive websites with 95%+ performance scores',
-        'Implemented advanced animations and micro-interactions',
-        'Optimized websites for SEO resulting in 50% traffic increase'
-      ],
-      technologies: ['HTML5', 'CSS3', 'JavaScript', 'GSAP', 'Webpack', 'Sass'],
-      color: 'pink'
-    },
-    {
-      title: 'Junior Developer',
-      company: 'StartUp Ventures',
-      location: 'Austin, TX',
-      period: '2019 - 2020',
-      type: 'Full-time',
-      description: 'Started my professional journey contributing to various projects and learning from senior developers. Focused on both frontend and backend development.',
-      achievements: [
-        'Completed comprehensive training in full-stack development',
-        'Contributed to 3 major product features',
-        'Maintained 99% code review approval rate'
-      ],
-      technologies: ['JavaScript', 'React', 'Express.js', 'MongoDB', 'Git'],
-      color: 'blue'
-    }
-  ];
+  {
+    title: 'Software Engineer I',
+    company: 'J.P. Morgan Chase - Infrastructure Platform',
+    location: 'Bengaluru, India',
+    period: 'Aug 2023 – Present',
+    type: 'Full-time',
+    description:
+      'Develop and maintain mission-critical applications and internal tools for mainframe operations and finance technology systems, focusing on performance optimization, automation, and reliability.',
+    achievements: [
+      'Designed and developed an end-to-end internal tool for mainframe dataset and ID certification using Angular 15, Spring Boot, CockroachDB, and Cypress E2E tests — reduced manual effort from 2 months to 20 days (12× productivity) and cut database write time for 100K records from 25 minutes to 2 seconds through targeted indexing, CockroachDB COPY, and transaction batching.',
+      'Developed REVA, an AI-powered video summarization platform using Python (NumPy, Pandas) with AWS (Transcribe, SageMaker, Polly, S3) and OpenAI APIs — reduced effective watch time by 35% via topic-based snippet generation.',
+      'Designed and implemented a MARS PTF tracking system using Kafka, Spring Boot, and Angular — reduced processing time by 25% through optimized workflows, improved SQL query performance via targeted indexing and execution plan tuning, and integrated Dynatrace dashboards for proactive SLO monitoring.',
+      'Maintained and enhanced 7 mission-critical mainframe operations applications, adding ServiceNow ticket automation, query optimizations, and logic efficiency improvements — reduced incidents and improved SLA adherence.',
+      'Integrated CodeCarbon.io to track and reduce workload emissions, achieving a verified 22% reduction through green coding practices.'
+    ],
+    technologies: [
+      'Angular 15',
+      'Spring Boot',
+      'CockroachDB',
+      'Cypress',
+      'Python',
+      'NumPy',
+      'Pandas',
+      'AWS (Transcribe, SageMaker, Polly, S3)',
+      'OpenAI APIs',
+      'Kafka',
+      'Dynatrace',
+      'ServiceNow'
+    ],
+    color: 'blue'
+  },
+  {
+    title: 'Software Engineer Intern',
+    company: 'J.P. Morgan Chase – CIB Payments',
+    location: 'Bengaluru, India',
+    period: 'May 2022 – Jul 2022',
+    type: 'Internship',
+    description:
+      'Contributed to the development of internal tools for client onboarding in CIB Payments, focusing on responsiveness, cross-device compatibility, and process efficiency.',
+    achievements: [
+      'Developed a responsive web application using React.js with Recoil and Spring Boot, ensuring seamless performance across devices and browsers.',
+      'Streamlined client onboarding by automating key workflow steps, reducing onboarding time by 15%.'
+    ],
+    technologies: ['React.js', 'Recoil', 'Spring Boot', 'Java', 'MySQL'],
+    color: 'purple'
+  }
+];
 
   const getColorClasses = (color: string) => {
     const colors = {
@@ -90,7 +78,7 @@ const ExperienceSection: React.FC = () => {
   };
 
   return (
-    <section id="experience" className="py-20 px-4 relative">
+    <section id="experience" className="py-20 px-30 relative">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -205,9 +193,65 @@ const ExperienceSection: React.FC = () => {
             <p className="text-lg text-dark-200 mb-6">
               Open to new opportunities and exciting challenges. Let's build something amazing together!
             </p>
-            <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 glow-purple">
+            {/* <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 glow-purple">
               Get In Touch
-            </button>
+            </button> */}
+
+            <div className="relative inline-block text-left">
+      {/* Main Button */}
+      <div className="relative inline-block text-left">
+  {/* Main Button */}
+  <button
+    onClick={() => setOpen(!open)}
+    className="group px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:from-purple-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-purple-400"
+  >
+    <span className="flex items-center gap-2">
+       Let's Connect!
+    </span>
+  </button>
+
+  {/* Dropdown Menu */}
+ {open && (
+  <div className="absolute left-full ml-3 bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-xl rounded-2xl border border-purple-500/20 shadow-lg p-3 flex items-center space-x-3 animate-fade-in-up z-50">
+    {[
+      {
+        href: "https://twitter.com/BelambeNiranjan",
+        icon: <Twitter className="w-5 h-5" />,
+        hoverColor: "hover:bg-purple-500/20"
+      },
+      {
+        href: "https://instagram.com/ayyy_niryaaa",
+        icon: <Instagram className="w-5 h-5" />,
+        hoverColor: "hover:bg-pink-500/20"
+      },
+      {
+        href: "https://www.linkedin.com/in/niranjan-belambe-71329018b/",
+        icon: <Linkedin className="w-5 h-5" />,
+        hoverColor: "hover:bg-blue-500/20"
+      },
+      {
+        href: "mailto:niranjanbelambe28@gmail.com",
+        icon: <Mail className="w-5 h-5" />,
+        hoverColor: "hover:bg-mint-500/20"
+      }
+    ].map((item, index) => (
+      <a
+        key={index}
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-300 ${item.hoverColor} hover:scale-110`}
+      >
+        {item.icon}
+      </a>
+    ))}
+  </div>
+)}
+
+</div>
+
+      
+    </div>
           </div>
         </div>
 

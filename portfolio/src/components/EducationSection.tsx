@@ -4,75 +4,51 @@ import { GraduationCap, Award, Book, Calendar, MapPin, Star } from 'lucide-react
 const EducationSection: React.FC = () => {
   const education = [
     {
-      degree: 'Master of Science in Computer Science',
-      school: 'Stanford University',
-      location: 'Stanford, CA',
-      period: '2017 - 2019',
-      gpa: '3.8/4.0',
-      description: 'Specialized in Machine Learning and Software Engineering. Completed thesis on "Scalable Web Application Architecture".',
+      degree: 'Bachelor of Technology in Computer Science & Engineering',
+      school: 'National Institute of Technology, Surat',
+      location: 'Surat, India',
+      period: '2019 - 2023',
+      gpa: '8.86/10',
+      description: 'Built a strong foundation in algorithms, systems, and software engineering through coursework, projects, and hands-on problem-solving.',
       achievements: [
-        'Dean\'s List for 3 consecutive semesters',
-        'Teaching Assistant for Data Structures & Algorithms',
-        'Led student tech innovation club'
+        'Graduated with a CGPA of 8.86/10 from a premier engineering institute',
+        'Head of Cybersecurity in MLSA club',
+        'Active participant in technical hackathons and coding competitions',
+        'Developed multiple full-stack applications as part of coursework and personal projects'
       ],
       color: 'purple'
-    },
-    {
-      degree: 'Bachelor of Science in Software Engineering',
-      school: 'University of California, Berkeley',
-      location: 'Berkeley, CA',
-      period: '2013 - 2017',
-      gpa: '3.7/4.0',
-      description: 'Comprehensive program covering software development, system design, and project management.',
-      achievements: [
-        'Graduated Magna Cum Laude',
-        'President of Computer Science Society',
-        'Winner of Annual Hackathon 2016'
-      ],
-      color: 'blue'
     }
-  ];
+];
 
   const certifications = [
     {
-      name: 'AWS Certified Solutions Architect',
+      name: 'AWS Certified Solutions Architect-Associate',
+      link: 'https://www.credly.com/earner/earned/badge/72b0bcb8-eaf0-4d3f-b9ec-110e35372b28',
       issuer: 'Amazon Web Services',
-      date: '2023',
-      icon: '☁️',
+      date: '5/10/2025',
       color: 'purple'
     },
     {
-      name: 'Google Cloud Professional Developer',
-      issuer: 'Google Cloud',
-      date: '2022',
-      icon: '🔧',
+      title: 'AWS Certified Cloud Practitioner',
+      link: 'https://www.credly.com/earner/earned/badge/72b0bcb8-eaf0-4d3f-b9ec-110e35372b28',
+      issuer: 'Amazon Web Services',
+      date: '10/26/2024',
       color: 'blue'
-    },
-    {
-      name: 'React Advanced Certification',
-      issuer: 'Meta',
-      date: '2022',
-      icon: '⚛️',
-      color: 'pink'
-    },
-    {
-      name: 'MongoDB Certified Developer',
-      issuer: 'MongoDB Inc.',
-      date: '2021',
-      icon: '🍃',
-      color: 'purple'
     }
   ];
 
   const courses = [
-    'Advanced Algorithms & Data Structures',
-    'Machine Learning & AI',
-    'Distributed Systems',
-    'Software Architecture',
-    'Database Systems',
-    'Computer Networks',
-    'Web Development',
-    'Mobile App Development'
+    'C, C++, Java, Python',
+    'Advanced Data Structures & Algorithms',
+    'Operating Systems',
+    'Computer Architecture',
+    'Database Management Systems',
+    'Digital Design & Computer Organization',
+    'Mathematics for Computer Science',
+    'Microcontrollers',
+    'Cybersecurity & Ethical Hacking',
+    'Cryptography',
+    'Data Science'
   ];
 
   const getColorClasses = (color: string) => {
@@ -191,13 +167,13 @@ const EducationSection: React.FC = () => {
                       className={`bg-dark-800/30 backdrop-blur-sm rounded-xl p-6 border ${colorClasses.border} card-hover`}
                     >
                       <div className="flex items-center gap-4">
-                        <div className={`w-12 h-12 ${colorClasses.bg} rounded-lg flex items-center justify-center text-2xl border ${colorClasses.border}`}>
-                          {cert.icon}
-                        </div>
+                  
                         <div className="flex-1">
                           <h4 className="font-semibold text-dark-100 mb-1">{cert.name}</h4>
                           <p className="text-dark-300 text-sm mb-1">{cert.issuer}</p>
                           <p className={`text-xs ${colorClasses.text}`}>{cert.date}</p>
+                          <a href={cert.link} target="_blank" rel="noopener noreferrer" className={`text-xs ${colorClasses.text} underline hover:opacity-80 transition`}>
+                                Credly Link</a>
                         </div>
                         <Award className={`w-6 h-6 ${colorClasses.text}`} />
                       </div>

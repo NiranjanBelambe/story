@@ -1,58 +1,51 @@
 import React from 'react';
-import { Heart, Camera, Music, Gamepad2, Palette, Coffee, Mountain, Book } from 'lucide-react';
+import { Heart, Camera, Music, Gamepad2, Palette, Coffee, Mountain, Book, Pencil, Volleyball } from 'lucide-react';
 
 const PassionsSection: React.FC = () => {
   const passions = [
-    {
-      icon: Music,
-      title: 'Music Production',
-      description: 'Creating electronic music and beats in my home studio. Love experimenting with different genres and sound design.',
-      color: 'purple',
-      tags: ['Electronic', 'Ambient', 'Lo-fi']
-    },
-    {
-      icon: Camera,
-      title: 'Photography',
-      description: 'Capturing moments and landscapes through my lens. Specializing in street photography and nature shots.',
-      color: 'blue',
-      tags: ['Street', 'Landscape', 'Portrait']
-    },
-    {
-      icon: Palette,
-      title: 'Digital Art',
-      description: 'Creating digital illustrations and UI designs. Love exploring new art styles and design trends.',
-      color: 'pink',
-      tags: ['Illustration', 'UI Design', 'Concept Art']
-    },
-    {
-      icon: Coffee,
-      title: 'Coffee Brewing',
-      description: 'Passionate about specialty coffee and different brewing methods. Always experimenting with new beans and techniques.',
-      color: 'purple',
-      tags: ['Pour Over', 'Espresso', 'Cold Brew']
-    },
-    {
-      icon: Mountain,
-      title: 'Hiking & Nature',
-      description: 'Exploring trails and connecting with nature. Find inspiration and peace in the great outdoors.',
-      color: 'blue',
-      tags: ['Trail Running', 'Camping', 'Rock Climbing']
-    },
-    {
-      icon: Gamepad2,
-      title: 'Game Development',
-      description: 'Building indie games as a hobby. Love the intersection of creativity, storytelling, and technology.',
-      color: 'pink',
-      tags: ['Unity', '2D Games', 'Pixel Art']
-    },
-    {
-      icon: Book,
-      title: 'Reading & Writing',
-      description: 'Avid reader of sci-fi and tech books. Also enjoy writing technical blogs and short stories.',
-      color: 'purple',
-      tags: ['Sci-Fi', 'Tech Blogs', 'Creative Writing']
-    }
-  ];
+  {
+    icon: Gamepad2,
+    title: 'Gaming',
+    description: 'Passionate gamer who enjoys both competitive and story-driven experiences. Love exploring game design and mechanics.',
+    color: 'purple',
+    tags: ['RPG', 'Strategy', 'FPS']
+  },
+  {
+    icon: Volleyball,
+    title: 'Cricket',
+    description: 'Big cricket enthusiast who enjoys following matches and playing casually with friends.',
+    color: 'blue',
+    tags: ['Batting', 'Bowling', 'Fielding']
+  },
+  {
+    icon: Pencil,
+    title: 'Sketching',
+    description: 'Enjoy sketching and doodling, often bringing ideas to life on paper before turning them digital.',
+    color: 'pink',
+    tags: ['Portraits', 'Concept Art', 'Line Work']
+  },
+  {
+    icon: Palette,
+    title: 'Digital Art',
+    description: 'Creating digital illustrations and designs using modern tools. Love experimenting with styles and color palettes.',
+    color: 'purple',
+    tags: ['Illustration', 'UI Design', 'Concept Art']
+  },
+  {
+    icon: Book,
+    title: 'Reading',
+    description: 'Enjoy diving into books, from sci-fi adventures to thought-provoking non-fiction.',
+    color: 'blue',
+    tags: ['Sci-Fi', 'Technology', 'Self-Improvement']
+  },
+  {
+    icon: Music,
+    title: 'Music',
+    description: 'Passionate about listening to and exploring diverse genres, from lo-fi beats to energetic soundtracks.',
+    color: 'pink',
+    tags: ['Lo-fi', 'Electronic', 'Instrumental']
+  }
+];
 
   const getColorClasses = (color: string) => {
     const colors = {

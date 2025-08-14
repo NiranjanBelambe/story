@@ -124,6 +124,7 @@ module.exports = {
         'rotate-slow': 'rotate 30s linear infinite',
         'bob': 'bob 2s ease-in-out infinite',
         'sway': 'sway 3s ease-in-out infinite',
+        'electric': 'electric 2s infinite ease-in-out'
       },
       keyframes: {
         float: {

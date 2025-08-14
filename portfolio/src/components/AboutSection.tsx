@@ -1,6 +1,7 @@
 import React from 'react';
-import { Code2, Palette, Lightbulb, Users, Coffee, Music } from 'lucide-react';
-import { CreativeDoodle, PassionDoodle } from '../doodles/DoodleComponents';
+import { Code2, Palette, Lightbulb, Users, Coffee, Music, Dumbbell } from 'lucide-react';
+import { CreativeDoodle, PassionDoodle ,LottieAnimation} from '../doodles/DoodleComponents';
+import LaptopMan from '../assets/lottie/Man Working on Laptop.json';
 
 const AboutSection: React.FC = () => {
   const skills = [
@@ -50,8 +51,10 @@ const AboutSection: React.FC = () => {
   };
 
   return (
+    <div>
     <section id="about" className="py-20 px-4 relative overflow-hidden">
       {/* Background Elements */}
+      
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-32 left-32 w-64 h-64 bg-gradient-radial from-mint-500/10 to-transparent rounded-full blur-3xl animate-pulse-slow"></div>
         <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-radial from-coral-500/8 to-transparent rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '4s' }}></div>
@@ -65,7 +68,7 @@ const AboutSection: React.FC = () => {
           </h2>
           <div className="section-divider w-32 mx-auto"></div>
           <p className="text-lg text-dark-300 max-w-2xl mx-auto">
-            Passionate developer with a love for creating digital experiences that matter
+            Passionate developer with a love for creating solutions that matter!
           </p>
         </div>
 
@@ -83,19 +86,22 @@ const AboutSection: React.FC = () => {
             <div className="glass-strong rounded-2xl p-8 border border-mint-500/20 card-hover">
               <h3 className="text-2xl font-bold text-gradient-blue mb-6">Who I Am</h3>
               <p className="text-dark-200 leading-relaxed mb-6">
-                I'm a passionate full-stack developer with 3+ years of experience creating 
-                digital solutions that combine functionality with beautiful design. I love 
-                turning complex problems into simple, elegant solutions.
+                I’m a <span className="text-gradient-pink font-semibold">Full-Stack Software Engineer</span> with a knack for building 
+                <span className="text-gradient-blue font-semibold"> high-performance, scalable applications</span> and AI-driven solutions.  
+                From slashing database write times for 100K+ records from 25 minutes to 2 seconds,  
+                to crafting end-to-end tools that cut processes from months to days —  
+                I turn complex problems into clean, impactful code.
               </p>
               <p className="text-dark-200 leading-relaxed mb-6">
-                When I'm not coding, you'll find me exploring new technologies, contributing 
-                to open-source projects, or sketching out ideas for my next creative project.
+                Outside of code, you’ll find me experimenting with <span className="text-gradient-blue font-semibold">tech, try new sports</span>,  
+                sipping too much coffee, and occasionally jamming to music while debugging.
               </p>
+
               
               {/* Enhanced Fun Stats */}
               <div className="grid grid-cols-2 gap-4 mt-8">
                 <div className="text-center p-4 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20 glass card-hover">
-                  <div className="text-2xl font-bold text-gradient-purple mb-1">50+</div>
+                  <div className="text-2xl font-bold text-gradient-purple mb-1">5+</div>
                   <div className="text-sm text-dark-300">Projects Completed</div>
                 </div>
                 <div className="text-center p-4 bg-gradient-to-br from-coral-500/10 to-peach-500/10 rounded-lg border border-coral-500/20 glass card-hover">
@@ -156,9 +162,10 @@ const AboutSection: React.FC = () => {
               <h4 className="text-lg font-semibold text-gradient-rainbow mb-4">When I'm Not Coding</h4>
               <div className="flex flex-wrap gap-3">
                 {[
-                  { icon: Coffee, text: 'Coffee Brewing', color: 'bg-coral-500/20 text-coral-300 border-coral-500/20' },
-                  { icon: Music, text: 'Music Production', color: 'bg-purple-500/20 text-purple-300 border-purple-500/20' },
+                  { icon: Coffee, text: 'Coffee', color: 'bg-coral-500/20 text-coral-300 border-coral-500/20' },
+                  { icon: Music, text: 'Music', color: 'bg-purple-500/20 text-purple-300 border-purple-500/20' },
                   { icon: Palette, text: 'Digital Art', color: 'bg-mint-500/20 text-mint-300 border-mint-500/20' },
+                  { icon: Dumbbell, text: 'Sports', color: 'bg-mint-500/20 text-mint-300 border-mint-500/20' }
                 ].map((interest, index) => {
                   const IconComponent = interest.icon;
                   return (
@@ -200,6 +207,7 @@ const AboutSection: React.FC = () => {
         }
       `}</style>
     </section>
+    </div>
   );
 };
 

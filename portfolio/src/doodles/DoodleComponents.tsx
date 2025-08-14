@@ -1,4 +1,7 @@
 import React from 'react';
+import Lottie from 'react-lottie';
+import animationData from '../assets/lottie/Man Working on Laptop.json';
+import { log } from 'console';
 
 // SVG Doodle Components with enhanced animations and colors
 
@@ -261,18 +264,52 @@ export const PassionDoodle: React.FC<{ className?: string }> = ({ className = "w
 );
 
 // Lottie placeholder component (for when you add actual Lottie files)
-export const LottieAnimation: React.FC<{ 
-  src?: string; 
+// export const LottieAnimation: React.FC<{ 
+//   src?: string; 
+//   className?: string;
+//   fallback?: React.ReactNode;
+// }> = ({ src, className = "w-32 h-32", fallback }) => {
+//   // For now, return fallback or a placeholder
+//   // When you add actual Lottie files, you can use lottie-react here\
+//   return (
+//     <div className={`${className} flex items-center justify-center`}>
+//       {fallback || (
+//         <div className="text-4xl animate-bounce"></div>
+//       )}
+//     </div>
+//   );
+// };
+
+
+
+
+export const LottieAnimation: React.FC<{
+  src?: any;
   className?: string;
   fallback?: React.ReactNode;
-}> = ({ src, className = "w-32 h-32", fallback }) => {
-  // For now, return fallback or a placeholder
-  // When you add actual Lottie files, you can use lottie-react here
+  width?: number;
+  height?: number;
+}> = ({ src, className = "w-50 h-50",width=200,height=200, fallback }) => {
+
+  console.log("LottieAnimation rendered with src:", src);
+  const defaultOptions = {
+      loop: true,
+      autoplay: true,
+      animationData: src,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid"
+      }
+    };
+    
   return (
     <div className={`${className} flex items-center justify-center`}>
-      {fallback || (
-        <div className="text-4xl animate-bounce">🎨</div>
-      )}
+      
+      <Lottie 
+	      options={defaultOptions}
+        height={height}
+        width={width}/>
+        
+      
     </div>
   );
 };
